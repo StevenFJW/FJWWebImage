@@ -1,0 +1,53 @@
+//
+//  UIImageView+WebImage.h
+//  FJWWebImage
+//
+//  Created by fengjiwen on 17/6/7.
+//  Copyright © 2017年 冯继文. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+typedef void (^ESWebImageCompleted)(UIImage *image, NSError *error, NSURL *imageURL);
+
+@interface UIImageView (WebImage)
+
+/**
+ 加载网络图片
+ 根据视图尺寸确定图片尺寸，拼接图片地址参数
+ 根据视图尺寸生成占位图，如果它是NULL
+
+ @param URLString        图片地址
+ @param placeholderImage 占位图
+ @param completedBlock   完成后回调
+ */
+- (void)imageWithURLString:(NSString *)URLString placeholderImage:(UIImage *)placeholderImage completed:(ESWebImageCompleted)completedBlock;
+- (void)imageWithURLString:(NSString *)URLString;
+- (void)imageWithURLString:(NSString *)URLString placeholderImage:(UIImage *)placeholderImage;
+- (void)imageWithURLString:(NSString *)URLString completed:(ESWebImageCompleted)completedBlock;
+
+
+/**
+ 加载网络图片
+ 根据视图尺寸拼接图片地址参数
+ 根据视图尺寸生成占位图，如果它是NULL
+
+ @param URLString        图片地址
+ @param size             图片尺寸
+ @param placeholderImage 占位图
+ @param completedBlock   完成后回调
+ */
+- (void)imageWithURLString:(NSString *)URLString Size:(CGSize)size placeholderImage:(UIImage *)placeholderImage completed:(ESWebImageCompleted)completedBlock;
+- (void)imageWithURLString:(NSString *)URLString Size:(CGSize)size;
+- (void)imageWithURLString:(NSString *)URLString Size:(CGSize)size completed:(ESWebImageCompleted)completedBlock;
+- (void)imageWithURLString:(NSString *)URLString Size:(CGSize)size placeholderImage:(UIImage *)placeholderImage;
+
+/**
+ 加载商品图片。 从上至下，截取最大方形
+ 
+ @param URLString <#URLString description#>
+ */
+- (void)productImageWithURLString:(NSString *)URLString;
+
+@end
+

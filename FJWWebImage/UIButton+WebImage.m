@@ -8,7 +8,7 @@
 
 #import "UIButton+WebImage.h"
 #import <objc/runtime.h>
-#import <UIButton+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
 #import "FJWWebImage.h"
 
 @implementation UIButton (WebImage)

@@ -8,7 +8,7 @@
 
 #import "UIImageView+WebImage.h"
 #import <objc/runtime.h>
-#import <UIImageView+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 #import "FJWWebImage.h"
 
 @implementation UIImageView (WebImage)

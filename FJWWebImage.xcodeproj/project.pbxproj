@@ -23,6 +23,7 @@
 		B20D64981EE79B720081586C /* UIButton+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B20D64921EE79B720081586C /* UIButton+WebImage.m */; };
 		B20D64991EE79B720081586C /* UIImageView+WebImage.h in Headers */ = {isa = PBXBuildFile; fileRef = B20D64931EE79B720081586C /* UIImageView+WebImage.h */; };
 		B20D649A1EE79B720081586C /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B20D64941EE79B720081586C /* UIImageView+WebImage.m */; };
+		B20D64A81EE7CF620081586C /* FJWWebImage.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B20D64A71EE7CF620081586C /* FJWWebImage.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		B20D64921EE79B720081586C /* UIButton+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebImage.m"; sourceTree = "<group>"; };
 		B20D64931EE79B720081586C /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
 		B20D64941EE79B720081586C /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
+		B20D64A71EE7CF620081586C /* FJWWebImage.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FJWWebImage.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		B20D64471EE797110081586C = {
 			isa = PBXGroup;
 			children = (
+				B20D64A71EE7CF620081586C /* FJWWebImage.podspec */,
 				B20D64531EE797110081586C /* FJWWebImage */,
 				B20D646D1EE799F70081586C /* FJWWebImageDemo */,
 				B20D64521EE797110081586C /* Products */,
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20D64631EE799690081586C /* resource.bundle in Resources */,
+				B20D64A81EE7CF620081586C /* FJWWebImage.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D80BCC01DE407ACCA826FDF2 /* [CP] Copy Pods Resources */ = {
@@ -558,6 +562,7 @@
 				B20D64821EE799F80081586C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
